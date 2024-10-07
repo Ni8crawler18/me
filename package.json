@@ -1,0 +1,19 @@
+{
+    "name": "me",
+    "version": "1.0.0",
+    "description": "The website shows who I am",
+    "main": "index.html",
+    "scripts": {
+        "deploy": "gh-pages -d ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ni8crawler18/me.git"
+    },
+    "homepage": "https://ni8crawler18.github.io/me",
+    "author": "Venkatesh R",
+    "license": "MIT",
+    "devDependencies": {
+        "gh-pages": "^6.1.1"
+    }
+}
