@@ -81,3 +81,17 @@
     - "XGBoost"
     - "SHAP"
     - "RandomizedSearchCV"
+
+- id: "07"
+  title: "oss-scout."
+  category: "Developer Tooling / OSS Workflow"
+  image: "images/portfolio/oss-scout-gh.png"
+  galleryImage: "images/portfolio/gallery/g-oss-scout-gh.png"
+  github: "https://github.com/Ni8crawler18/oss-scout"
+  live: ""
+  modalTitle: "oss-scout — OSS Contribution Discovery"
+  modalDesc: "Daily open source contribution discovery and workflow tool targeting ZKP and Rust ML repositories. Scans 10+ repos across arkworks, SP1, EZKL, Candle, and Burn — fetches open issues via GitHub CLI, scores them by contributor-friendliness (labels, keyword matches, comment count, assignee status, recency), and generates ranked markdown digests. Includes a shell-based workflow helper that automates fork, clone, branch creation, and draft PR submission. Designed to reduce friction for sustained open source contributions."
+  tags:
+    - "GitHub CLI"
+    - "Python / Bash"
+    - "ZKP + Rust ML"
