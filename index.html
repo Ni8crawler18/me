@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>Venkatesh</title>
-    <meta name="description" content="portfolio of Venkatesh R">
+    <meta name="description" content="Venkatesh R — ML infrastructure, inference pipelines, and NLP systems. Currently at Saptang Labs.">
     <meta name="author" content="Venkatesh R">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/vendor.css">
@@ -13,6 +13,111 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
     <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        /* --- 2:1 GitHub OG card images --- */
+        .folio-list__item-pic img {
+            width: calc(var(--item-min-height) * 1.8) !important;
+            height: var(--item-min-height) !important;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .folio-list__item-link {
+            padding-left: calc(var(--item-min-height) * 1.8 + 1.5rem) !important;
+        }
+        .folio-list__item-pic {
+            width: calc(var(--item-min-height) * 1.8);
+        }
+
+
+
+        /* --- Hackathon section --- */
+        .hackathons .testimonial-slider__author {
+            padding-left: 0;
+            min-height: auto;
+            margin-bottom: var(--vspace-0_5);
+        }
+        .hackathons .testimonial-slider__avatar {
+            display: none;
+        }
+        .hackathon-press-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: calc(var(--text-size) * 0.7368);
+            color: var(--color-1);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .hackathon-press-link:hover { color: white; }
+        .hackathon-img {
+            display: block;
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: var(--vspace-0_75);
+            object-fit: cover;
+        }
+
+        /* --- Responsive overrides --- */
+        @media screen and (max-width: 600px) {
+            .folio-list__proj-links { right: var(--vspace-0_5); }
+        }
+        @media screen and (max-width: 500px) {
+            .folio-list__item-link {
+                padding-left: calc(var(--item-min-height) * 1.8 + 1rem) !important;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .folio-list__item-link { padding-left: 0 !important; }
+            .folio-list__item-pic { width: 100%; }
+            .folio-list__item-pic img {
+                width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 2/1;
+                object-fit: contain;
+            }
+            .folio-list__proj-links { display: none; }
+        }
+
+        /* --- Project card icon links --- */
+        .folio-list__item {
+            position: relative;
+        }
+        .folio-list__proj-links {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            display: flex;
+            gap: 0.6rem;
+            z-index: 2;
+        }
+        .folio-list__proj-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            transition: background 0.3s ease;
+        }
+        .folio-list__proj-links a:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .folio-list__proj-links svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: white;
+        }
+        /* --- Modal clickable image --- */
+        .modal-popup > a > img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -66,18 +171,15 @@
 
                         <h1 class="text-huge-title">
                             I am Venkatesh, <br>
-                            a ML Developer<br>
-                            & Blockchain<br> 
-                            Architect based <br>
-                            in India.
+                            I build software<br>
+                            that scales.
                         </h1>
                     </div>
 
                     <ul class="intro-social">
                         <li><a href="https://github.com/Ni8crawler18">Github</a></li>
                         <li><a href="https://www.linkedin.com/in/ni8crawler">Linkedin</a></li>
-                        <li><a href="https://discord.com/users/810925347221798922">Discord</a></li>
-                        <li><a href="https://orcid.org/my-orcid?orcid=0009-0000-2982-9144">Orcid</a></li>
+                        <li><a href="mailto:hessiancurve@gmail.com">Email</a></li>
                     </ul>
 
                 </div>
@@ -103,16 +205,16 @@
                                 About
                             </h2>
                             <p class="attention-getter" data-animate-el>
-                                I am a dedicated developer specializing in machine learning 
-                                and blockchain technologies, with experience in building decentralized 
-                                applications, smart contracts, and APIs. I have contributed to fintech 
-                                innovations, including cross-border payment infrastructures and sustainable 
-                                investment platforms. Currently pursuing a BS in Data Science from IIT Madras, 
-                                I also hold a B.Tech in Biotechnology. My expertise includes Python, Rust, 
-                                Solidity, and frameworks such as Scikit-learn, Numpy, and Pandas, which 
-                                I utilize to deliver scalable and impactful solutions. 
+                                Currently at Saptang Labs, where I build ML inference pipelines,
+                                embedding search, and transformer-based NLP services for government
+                                law enforcement. Before this, I ran a fintech company (DIPP-registered)
+                                building ZK infrastructure for proof generation &mdash; replacing
+                                data-heavy workflows with boolean attestations. I also spend time on
+                                independent work: GLOF prediction from satellite imagery, quantum
+                                circuits for intrusion detection, real-time fact-checking on live
+                                broadcasts. Most of these were hackathon entries that ended up winning.
                             </p>
-                            <a href="https://drive.google.com/file/d/179WIy-pqjYbM_YzecvbnVp2xJu9W6w6w/view?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                            <a href="https://github.com/Ni8crawler18" class="btn btn--medium u-fullwidth" data-animate-el>GitHub</a>
 
                         </div>
                     </div>
@@ -124,12 +226,12 @@
                         <h2 class="text-pretitle" data-animate-el>Expertise</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Machine learning</li>
-                            <li>Deep Learning</li>
-                            <li>DeFI</li>
-                            <li>ZK infrastructure</li>
-                            <li>Smart Contracts</li>
-                            <li>Web3 Interoperability</li>
+                            <li>Transformers &amp; LLM Serving</li>
+                            <li>RLHF &amp; Alignment</li>
+                            <li>Computer Vision</li>
+                            <li>ZK-SNARKs &amp; Proof Systems</li>
+                            <li>Distributed Inference</li>
+                            <li>Vector Search &amp; Retrieval</li>
                         </ul>
 
                     </div>
@@ -148,34 +250,38 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Bluink labs</h3>
-                                    <h5 class="timeline__meta">Founder</h5>
-                                    <p class="timeline__timeframe">August 2022 - Present</p>
+                                    <h4 class="timeline__title">Saptang Labs, Chennai</h3>
+                                    <h5 class="timeline__meta">AI Engineer (Consultant)</h5>
+                                    <p class="timeline__timeframe">June 2024 - Present</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        Developed and optimized smart contracts for cross-border payments 
-                                        and ESG solutions using Solidity. Built secure APIs to integrate 
-                                        blockchain with financial systems, focusing on transaction validation 
-                                        and efficiency. Worked on enhancing the scalability and security of 
-                                        blockchain-based fintech applications.
+                                        Responsible for the ML layer of a law enforcement evidence
+                                        processing platform. Face recognition (InsightFace, DBSCAN
+                                        clustering, Qdrant), object detection (Florence-2), multilingual
+                                        OCR across 14 languages, speaker diarization, and violence
+                                        detection &mdash; running as 5 microservices across 7 databases.
+                                        Also wrote 11 transformer-based NLP packages served via Gemma 3
+                                        12B on vLLM, processing ~10K posts/day.
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">GDSC - IIT Madras</h4>
-                                    <h5 class="timeline__meta">Blockchain Developer</h5>
-                                    <p class="timeline__timeframe">August 2022 - November 2023</p>
+                                    <h4 class="timeline__title">Bluink Fintech OPC Pvt Ltd</h4>
+                                    <h5 class="timeline__meta">Founder</h5>
+                                    <p class="timeline__timeframe">August 2023 - June 2024</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        Designed decentralized applications (DApps) and implemented smart contracts 
-                                        using Solidity. Worked on integrating blockchain technology into student-led 
-                                        projects with a focus on secure transaction systems. Contributed to hands-on 
-                                        blockchain projects to solve real-world problems.
+                                        DIPP-registered fintech company (DIPP-143482). Built ZK
+                                        infrastructure for proof generation &mdash; the premise being
+                                        that most financial workflows consuming raw personal data only
+                                        need a boolean answer. Designed Circom circuits and Groth16-based
+                                        proving systems to replace data-heavy KYC and compliance checks
+                                        with verifiable boolean attestations.
                                     </p>
                                 </div>
                             </div>
@@ -195,33 +301,32 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Indian Institute of Technology, Madras</h3>
-                                    <h5 class="timeline__meta">Bachelors in Datascience</h5>
-                                    <p class="timeline__timeframe">April 2022 - 2026</p>
+                                    <h4 class="timeline__title">Bannari Amman Institute of Technology</h4>
+                                    <h5 class="timeline__meta">B.Tech Biotechnology</h5>
+                                    <p class="timeline__timeframe">November 2022 - April 2026</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        Learned data analysis, machine learning, and statistical modeling, using Python, 
-                                        Pandas, and Scikit-learn. Developed skills in handling large datasets and building 
-                                        predictive models. Focused on practical applications of machine learning algorithms 
-                                        and data-driven problem-solving.
+                                        Studied biotechnology &mdash; genomics, proteomics, metabolic
+                                        pathways. Taught myself systems programming, ML, and
+                                        cryptography alongside. Most applied experience comes from
+                                        production work at Saptang Labs and the independent projects
+                                        listed below.
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Bannari Amman Institute of Technology</h4>
-                                    <h5 class="timeline__meta">Bachelors in Biotechnology</h5>
-                                    <p class="timeline__timeframe">August 2022 - 2026</p>
+                                    <h4 class="timeline__title">Certifications</h4>
+                                    <h5 class="timeline__meta">CS50 AI (Cambridge) &middot; IIT Kanpur</h5>
+                                    <p class="timeline__timeframe">2023</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        Studied molecular biology, genetics, and bioprocess engineering 
-                                        with a focus on biotechnology applications. Gained experience in 
-                                        lab techniques and bioinformatics. Worked on projects involving 
-                                        genetic engineering and sustainable biotechnological solutions
+                                        CS50 AI from Cambridge. Economics of Banking &amp; Finance Markets
+                                        and Operations &amp; Supply Chain Management, both from IIT Kanpur.
                                     </p>
                                 </div>
                             </div>    
@@ -240,7 +345,7 @@
                             Recent Works
                         </h2>
                         <p class="h1" data-animate-el>
-                            Here are some of my favorite projects I have done lately. Feel free to check them out.
+                            Here is some of my recent work &mdash; production systems, hackathon builds, and independent research.
                         </p>
     
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
@@ -248,128 +353,119 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/fuji.jpg"
-                                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x"  alt="">
+                                        <img src="images/portfolio/glofsense-gh.png" alt="Glofsense">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Website
+                                            Climate Tech / GLOF Prediction
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Retro Camera.
+                                            Glofsense.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/Glofsense" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                </div>
+                            </li>
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/lamp.jpg" 
-                                             srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/eigencurve-gh.png" alt="Eigencurve">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Product Design
+                                            Quantum ML / Cybersecurity
                                         </div>
                                         <div class="folio-list__item-title">
-                                            The White Lamp.
+                                            Eigencurve.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/Eigencurve" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                </div>
+                            </li>
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/rucksack.jpg" 
-                                             srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/nirnay-gh.png" alt="Nirnay">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Branding
+                                            Real-time Fact-Checking
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Rucksuck.
+                                            Nirnay.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/Nirnay" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                    <a href="https://nirnay-labs.vercel.app/" target="_blank" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7H12z"/></svg></a>
+                                </div>
+                            </li>
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-04">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/skaterboy.jpg"
-                                             srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/xylem-gh.png" alt="Xylem">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Website
+                                            ZK Identity Verification
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Since Day One.
+                                            Xylem.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/Xylem" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                    <a href="https://eigenparse.com" target="_blank" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7H12z"/></svg></a>
+                                </div>
+                            </li>
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-05">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/sanddunes.jpg" 
-                                             srcset="images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/phloem-gh.png" alt="Phloem">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Illustration
+                                            Privacy / Consent Layer
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Sand Dunes.
+                                            Phloem.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/Phloem" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                    <a href="https://eigensparse.com" target="_blank" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7H12z"/></svg></a>
+                                </div>
+                            </li>
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-06">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/minimalismo.jpg" 
-                                             srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/xgboost-gh.png" alt="XGBoostClassifier">
                                     </div>
-                                    
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Branding
+                                            GST Fraud Classification
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Minimalismo.
+                                            XGBoostClassifier.
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                                <div class="folio-list__proj-links">
+                                    <a href="https://github.com/Ni8crawler18/XG_boost_classifier" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+                                </div>
+                            </li>
 
                         </ul> <!-- end folio-list -->
 
@@ -380,179 +476,187 @@
                     -------------------------------------------- -->
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
-                
+                            <a href="https://github.com/Ni8crawler18/Glofsense" target="_blank"><img src="images/portfolio/gallery/g-glofsense-gh.png" alt="Glofsense"></a>
+
                             <div class="modal-popup__desc">
-                                <h5>Retro Camera</h5>
-                                <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                                <h5>Glofsense &mdash; GLOF Early Warning</h5>
+                                <p>End-to-end pipeline for glacial lake outburst flood prediction. Sentinel-1 SAR imagery is processed to track surface deformation; temporal sequences are modeled through an LSTM to capture ice-melt dynamics. XGBoost classifies risk levels on fused feature vectors. An ESP32 sensor array (water level, temperature, flow rate) provides real-time ground truth calibration. Downstream module simulates water flow to compute evacuation corridors and time-to-impact estimates. Won C-DAC HimaShield Grand Challenge 2025 (Rs 5,00,000). Covered in Press Information Bureau release.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
+                                    <li>LSTM / XGBoost</li>
+                                    <li>SAR Imagery</li>
+                                    <li>ESP32 Sensor Fusion</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-lamp.jpg" alt="">
-                
+                            <a href="https://github.com/Ni8crawler18/Eigencurve" target="_blank"><img src="images/portfolio/gallery/g-eigencurve-gh.png" alt="Eigencurve"></a>
+
                             <div class="modal-popup__desc">
-                                <h5>The White Lamp</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                <h5>Eigencurve &mdash; Quantum-Classical IDS</h5>
+                                <p>Hybrid quantum-classical intrusion detection system. A 4-qubit variational quantum circuit (PennyLane, angle embedding, strongly entangling layers) is trained on CICIDS NetFlow features and benchmarked against XGBoost and LightGBM. The objective was to evaluate whether parameterized quantum circuits offer any advantage on non-linear decision boundaries in high-dimensional traffic data. VirusTotal API handles IOC enrichment and threat correlation. Stack: Next.js frontend, FastAPI backend. 3rd Prize, Indian Army Terrier Cyber Quest 2025.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Branding</li>
+                                    <li>VQC / PennyLane</li>
+                                    <li>XGBoost / LightGBM</li>
+                                    <li>VirusTotal IOC</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-03" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-rucksack.jpg" alt="">
-                
+                            <a href="https://github.com/Ni8crawler18/Nirnay" target="_blank"><img src="images/portfolio/gallery/g-nirnay-gh.png" alt="Nirnay"></a>
+
                             <div class="modal-popup__desc">
-                                <h5>Rucksuck</h5>
-                                <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
+                                <h5>Nirnay &mdash; Real-Time Broadcast Fact-Checking</h5>
+                                <p>Streaming pipeline for misinformation detection in live broadcasts. FFMPEG ingests TV/radio feeds, Whisper handles ASR with timestamp alignment, DistilBERT extracts verifiable claims from transcript segments, and Google Fact Check API cross-references them against indexed databases. Claims are scored with confidence metrics and surfaced on a Streamlit dashboard with source attribution. Designed for newsroom and regulatory deployment. Winner, NFSU Forensic Hackathon 2025 (Rs 1,00,000).</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Product Design</li>
+                                    <li>Whisper ASR</li>
+                                    <li>DistilBERT NLI</li>
+                                    <li>Streaming Inference</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-04" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="">
-                
+                            <a href="https://github.com/Ni8crawler18/Xylem" target="_blank"><img src="images/portfolio/gallery/g-xylem-gh.png" alt="Xylem"></a>
+
                             <div class="modal-popup__desc">
-                                <h5>Since Day One</h5>
-                                <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
+                                <h5>Xylem &mdash; Zero-Knowledge KYC</h5>
+                                <p>Privacy-preserving identity verification over Aadhaar credentials using ZK-SNARKs. Circom arithmetic circuits with Groth16 proving system let users attest to predicates (age &ge; 18, valid document, state residency) without revealing the underlying data. Proof generation in-browser via WASM in ~500ms, server-side verification in ~10&ndash;50ms, proof size &lt; 1KB. The goal is to replace KYC flows that needlessly consume private data with a single boolean attestation. Designed around DPDP Act 2023 requirements.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Website</li>
+                                    <li>ZK-SNARKs / Groth16</li>
+                                    <li>Circom</li>
+                                    <li>WASM Prover</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-05" hidden>
                         <div class="modal-popup">
+                            <a href="https://github.com/Ni8crawler18/Phloem" target="_blank"><img src="images/portfolio/gallery/g-phloem-gh.png" alt="Phloem"></a>
 
-                            <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="">
-                
                             <div class="modal-popup__desc">
-                                <h5>Sand Dunes</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                <h5>Phloem &mdash; ZK Consent Infrastructure</h5>
+                                <p>Consent management layer built on the same principle as Xylem: if a workflow only needs a yes/no answer, it should not require raw personal data. Implements field-level access control, versioned consent records with cryptographic audit trails, and automated DPDP Act compliance reporting. API-first architecture &mdash; consent policies are defined as code with pluggable storage backends.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Illustration</li>
+                                    <li>ZK Proofs</li>
+                                    <li>Policy-as-Code</li>
+                                    <li>DPDP Compliance</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-06" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="">
-                
+                            <a href="https://github.com/Ni8crawler18/XG_boost_classifier" target="_blank"><img src="images/portfolio/gallery/g-xgboost-gh.png" alt="XGBoostClassifier"></a>
+
                             <div class="modal-popup__desc">
-                                <h5>Minimalismo</h5>
-                                <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                                <h5>XGBoostClassifier &mdash; GST Fraud Detection</h5>
+                                <p>Binary classifier for the GST Hackathon &mdash; trained on ~700K taxpayer records with 21 attributes to detect fraudulent filings. Pipeline: missing-value imputation, feature scaling, RandomizedSearchCV over 100 iterations for hyperparameter tuning. Evaluated on accuracy, precision, recall, F1, AUC-ROC, log loss, calibration curves, and cumulative gain/lift charts. SHAP feature importance analysis identifies which attributes are most predictive of fraud.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
+                                    <li>XGBoost</li>
+                                    <li>SHAP</li>
+                                    <li>RandomizedSearchCV</li>
                                 </ul>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+
                         </div>
                     </div> <!-- end modal -->
 
                 </div> <!-- end works-portfolio -->
 
 
-                <div class="row testimonials">
+                <div class="row testimonials hackathons">
                     <div class="column lg-12" data-animate-block>
-        
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Recognition
+                        </h2>
+
                         <div class="swiper-container testimonial-slider" data-animate-el>
-        
+
                             <div class="swiper-wrapper">
 
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
-                                            <strong>Tim Cook</strong>
-                                            <span>CEO, Apple</span>
+                                            <strong>C-DAC HimaShield Grand Challenge 2025</strong>
+                                            <span>Winner &mdash; Rs 5,00,000</span>
                                         </cite>
                                     </div>
                                     <p>
-                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
-                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                                    Laudantium quia consequatur molestias delectus culpa.
+                                    Glofsense &mdash; GLOF prediction using Sentinel-1 SAR, LSTM for temporal patterns,
+                                    XGBoost for risk scoring, ESP32 sensors for ground truth. Covered by PIB.
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
-                
+                                    <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2107295" class="hackathon-press-link" target="_blank">PIB Press Release &rarr;</a>
+                                    <img src="images/hackathons/glofsense.jpg" alt="C-DAC HimaShield 2025" class="hackathon-img">
+                                </div>
+
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
-                                            <strong>Sundar Pichai</strong>
-                                            <span>CEO, Google</span>
+                                            <strong>NFSU Forensic Hackathon 2023</strong>
+                                            <span>Winner &mdash; Rs 5,00,000</span>
                                         </cite>
                                     </div>
                                     <p>
-                                    Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                                    Quasi voluptas eius distinctio. Atque eos maxime.
+                                    Digital forensics tool for law enforcement, built at NFSU Gandhinagar.
+                                    Extracts entities from documents and conversation transcripts, then
+                                    links them across sources.
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
-                
+                                    <a href="https://www.nfsu.ac.in/details/67" class="hackathon-press-link" target="_blank">NFSU Coverage &rarr;</a>
+                                    <img src="images/hackathons/forensic_23.png" alt="NFSU Forensic Hackathon 2023" class="hackathon-img">
+                                </div>
+
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
-                                            <strong>Satya Nadella</strong>
-                                            <span>CEO, Microsoft</span>
+                                            <strong>NFSU Forensic Hackathon 2025</strong>
+                                            <span>Winner &mdash; Rs 1,00,000</span>
                                         </cite>
                                     </div>
                                     <p>
-                                    Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                                    Voluptatem dignissimos ut.
+                                    Nirnay &mdash; flags misinformation in live TV/radio. FFMPEG capture,
+                                    Whisper transcription, DistilBERT claim extraction, Fact Check API verification.
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
-        
+                                    <a href="https://aifsc.nfsu.ac.in/hackathon" class="hackathon-press-link" target="_blank">AIFSC Hackathon &rarr;</a>
+                                    <img src="images/hackathons/forensic_25.jpg" alt="NFSU Forensic Hackathon 2025 — Nirnay" class="hackathon-img">
+                                </div>
+
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
-                                            <strong>Jeff Bezos</strong>
-                                            <span>CEO, Amazon</span>
+                                            <strong>Indian Army Terrier Cyber Quest 2025</strong>
+                                            <span>3rd Prize &mdash; QML Threat Detection</span>
                                         </cite>
                                     </div>
                                     <p>
-                                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
-                                    Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                    Eigencurve &mdash; quantum-classical IDS. 4-qubit VQC (PennyLane) vs
+                                    XGBoost/LightGBM on NetFlow data, with VirusTotal for IOC enrichment.
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
-            
+                                    <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2161248" class="hackathon-press-link" target="_blank">PIB Press Release &rarr;</a>
+                                    <img src="images/hackathons/terrier.jpg" alt="Indian Army Terrier Cyber Quest 2025" class="hackathon-img">
+                                </div>
+
                             </div> <!-- end swiper-wrapper -->
-        
+
                             <div class="swiper-pagination"></div>
-        
+
                         </div> <!-- end swiper-container -->
-        
+
                     </div> <!-- end column -->
                 </div> <!-- end row testimonials -->
 
@@ -570,9 +674,8 @@
                         </h2>
 
                         <p class="h1">
-                            I love to hear from you.
-                            Whether you have a question or just 
-                            want to chat about ML, DL and Web3 — shoot me a message.
+                            If you want to talk about AI, ML,
+                            or cryptography &mdash; reach out.
                         </p>
                     </div>
                 </div>
@@ -581,7 +684,7 @@
                     <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Reach me at</h3>
                         <p class="contact-links">
-                            <a href="mailto:info@bluinklabs.com" class="mailtoui">hello@bluinklabs.com</a> <br>
+                            <a href="mailto:hessiancurve@gmail.com" class="mailtoui">hessiancurve@gmail.com</a> <br>
                             <a href="tel:+91 8668135371">+91 8668135371</a>
                         </p>
                     </div>
@@ -590,12 +693,11 @@
                         <ul class="contact-social">
                             <li><a href="https://github.com/Ni8crawler18">Github</a></li>
                             <li><a href="https://www.linkedin.com/in/ni8crawler">Linkedin</a></li>
-                            <li><a href="https://discord.com/users/810925347221798922">Discord</a></li>
-                            <li><a href="https://orcid.org/my-orcid?orcid=0009-0000-2982-9144">Orcid</a></li>
+                            <li><a href="mailto:hessiancurve@gmail.com">Email</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:info@bluinklabs.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                        <a href="mailto:hessiancurve@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
                     </div>
                 </div>
 
