@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+    <div class="error-page">
+        <h1 class="error-page__code">404</h1>
+        <p class="error-page__message">This page doesn't exist.</p>
+        <div class="error-page__links">
+            <a href="{{ "" | relURL }}" class="btn btn--medium">Back to Home</a>
+            <a href="{{ "blog/" | relURL }}" class="btn btn--medium">Read the Blog</a>
+        </div>
+    </div>
+
+{{ end }}

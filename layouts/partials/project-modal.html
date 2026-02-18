@@ -1,0 +1,16 @@
+                    <div id="modal-{{ .id }}" hidden>
+                        <div class="modal-popup">
+                            <a href="{{ .github }}" target="_blank"><img src="{{ .galleryImage | relURL }}" alt="{{ .title }}"></a>
+
+                            <div class="modal-popup__desc">
+                                <h5>{{ .modalTitle }}</h5>
+                                <p>{{ .modalDesc }}</p>
+                                <ul class="modal-popup__cat">
+                                    {{- range .tags }}
+                                    <li>{{ . }}</li>
+                                    {{- end }}
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>

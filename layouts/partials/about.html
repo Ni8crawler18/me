@@ -1,0 +1,146 @@
+            <section id="about" class="s-about target-section">
+
+                <div class="row about-info wide" data-animate-block>
+
+                    <div class="column lg-6 md-12 about-info__pic-block">
+                        <img src="{{ "images/about-photo.jpg" | relURL }}"
+                             srcset="{{ "images/about-photo.jpg" | relURL }} 1x, {{ "images/about-photo@2x.jpg" | relURL }} 2x" alt="" class="about-info__pic" data-animate-el>
+                    </div>
+
+                    <div class="column lg-6 md-12">
+                        <div class="about-info__text" >
+
+                            <h2 class="text-pretitle with-line" data-animate-el>
+                                About
+                            </h2>
+                            <p class="attention-getter" data-animate-el>
+                                Currently at Saptang Labs, where I build ML inference pipelines,
+                                embedding search, and transformer-based NLP services for government
+                                law enforcement. Before this, I ran a fintech company (DIPP-registered)
+                                building ZK infrastructure for proof generation — replacing
+                                data-heavy workflows with boolean attestations. I also spend time on
+                                independent work: GLOF prediction from satellite imagery, quantum
+                                circuits for intrusion detection, real-time fact-checking on live
+                                broadcasts. Most of these were hackathon entries that ended up winning.
+                            </p>
+                            <a href="{{ .Site.Params.github }}" class="btn btn--medium u-fullwidth" data-animate-el>GitHub</a>
+                            <a href="{{ "Resume_AI_Researcher.pdf" | relURL }}" target="_blank" class="btn btn--medium u-fullwidth" data-animate-el>Resume</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row about-expertise" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
+
+                        <ul class="skills-list h1" data-animate-el>
+                            <li>Transformers &amp; LLM Serving</li>
+                            <li>RLHF &amp; Alignment</li>
+                            <li>Computer Vision</li>
+                            <li>ZK-SNARKs &amp; Proof Systems</li>
+                            <li>Distributed Inference</li>
+                            <li>Vector Search &amp; Retrieval</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="row about-timelines" data-animate-block>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Experience
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Saptang Labs, Chennai</h4>
+                                    <h5 class="timeline__meta">AI Engineer (Consultant)</h5>
+                                    <p class="timeline__timeframe">June 2024 - Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        Responsible for the ML layer of a law enforcement evidence
+                                        processing platform. Face recognition (InsightFace, DBSCAN
+                                        clustering, Qdrant), object detection (Florence-2), multilingual
+                                        OCR across 14 languages, speaker diarization, and violence
+                                        detection — running as 5 microservices across 7 databases.
+                                        Also wrote 11 transformer-based NLP packages served via Gemma 3
+                                        12B on vLLM, processing ~10K posts/day.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Bluink Fintech OPC Pvt Ltd</h4>
+                                    <h5 class="timeline__meta">Founder</h5>
+                                    <p class="timeline__timeframe">August 2023 - June 2024</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        DIPP-registered fintech company (DIPP-143482). Built ZK
+                                        infrastructure for proof generation — the premise being
+                                        that most financial workflows consuming raw personal data only
+                                        need a boolean answer. Designed Circom circuits and Groth16-based
+                                        proving systems to replace data-heavy KYC and compliance checks
+                                        with verifiable boolean attestations.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Education
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Bannari Amman Institute of Technology</h4>
+                                    <h5 class="timeline__meta">B.Tech Biotechnology</h5>
+                                    <p class="timeline__timeframe">November 2022 - April 2026</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        Studied biotechnology — genomics, proteomics, metabolic
+                                        pathways. Taught myself systems programming, ML, and
+                                        cryptography alongside. Most applied experience comes from
+                                        production work at Saptang Labs and the independent projects
+                                        listed below.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Certifications</h4>
+                                    <h5 class="timeline__meta">CS50 AI (Cambridge) · IIT Kanpur</h5>
+                                    <p class="timeline__timeframe">2023</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        CS50 AI from Cambridge. Economics of Banking &amp; Finance Markets
+                                        and Operations &amp; Supply Chain Management, both from IIT Kanpur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

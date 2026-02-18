@@ -1,0 +1,24 @@
+
+                <div class="row testimonials hackathons">
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Recognition
+                        </h2>
+
+                        <div class="swiper-container testimonial-slider" data-animate-el>
+
+                            <div class="swiper-wrapper">
+                                {{- range .Site.Data.hackathons }}
+                                {{- partial "hackathon-slide.html" . }}
+                                {{- end }}
+                            </div> <!-- end swiper-wrapper -->
+
+                            <div class="swiper-pagination"></div>
+
+                        </div> <!-- end swiper-container -->
+
+                    </div> <!-- end column -->
+                </div> <!-- end row testimonials -->
+
+            </section> <!-- end s-works -->

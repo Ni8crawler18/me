@@ -1,0 +1,30 @@
+            <section id="works" class="s-works target-section">
+
+                <div class="row works-portfolio">
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Recent Works
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Here is some of my recent work — production systems, hackathon builds, and independent research.
+                        </p>
+
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                            {{- range .Site.Data.projects }}
+                            {{- partial "project-card.html" . }}
+                            {{- end }}
+                        </ul> <!-- end folio-list -->
+
+                    </div> <!-- end column -->
+
+
+                    <!-- Modal Templates Popup
+                    -------------------------------------------- -->
+                    {{- range .Site.Data.projects }}
+                    {{- partial "project-modal.html" . }}
+                    {{- end }}
+
+                </div> <!-- end works-portfolio -->
+

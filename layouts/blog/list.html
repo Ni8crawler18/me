@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+    <div class="blog-listing">
+
+        <a href="{{ "" | relURL }}" class="blog-listing__back">&larr; Back to Home</a>
+
+        <h1 class="blog-listing__title">Blog</h1>
+        <p class="blog-listing__desc">Notes on things I've built, broken, and figured out.</p>
+
+        <div class="blog-grid">
+
+            {{- $posts := where .Pages ".Draft" false }}
+            {{- range $posts.ByDate.Reverse }}
+            <article class="blog-card">
+                <a href="{{ .RelPermalink }}">
+                    <div class="blog-card__date">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</div>
+                    <h3 class="blog-card__title">{{ .Title }}</h3>
+                    <p class="blog-card__text">{{ .Params.summary }}</p>
+                    {{- range .Params.tags }}
+                    <span class="blog-card__tag">{{ . }}</span>
+                    {{- end }}
+                </a>
+            </article>
+            {{- end }}
+
+            {{- if eq (len $posts) 0 }}
+            <article class="blog-card">
+                <div class="blog-card__date">Coming Soon</div>
+                <h3 class="blog-card__title">Posts are on the way</h3>
+                <p class="blog-card__text">Check back soon for notes on ML, cryptography, and systems engineering.</p>
+                <span class="blog-card__tag">Upcoming</span>
+            </article>
+            {{- end }}
+
+        </div>
+
+    </div>
+
+{{ end }}

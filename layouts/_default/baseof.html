@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+    {{- partial "head.html" . -}}
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        {{- partial "header.html" . -}}
+
+        <main class="s-content">
+            {{- block "main" . }}{{- end }}
+        </main>
+
+        {{- partial "footer.html" . -}}
+
+    </div>
+
+    <script src="{{ "js/plugins.js" | relURL }}"></script>
+    <script src="{{ "js/main.js" | relURL }}"></script>
+
+</body>
+</html>

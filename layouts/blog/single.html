@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+    <div class="blog-post">
+
+        <a href="{{ "blog/" | relURL }}" class="blog-post__back">&larr; Back to Blog</a>
+
+        <h1 class="blog-post__title">{{ .Title }}</h1>
+
+        <div class="blog-post__meta">
+            <span>{{ .Date.Format "January 2, 2006" }}</span>
+            <span>{{ .ReadingTime }} min read</span>
+            {{- if .Params.tags }}
+            {{- range .Params.tags }}
+            <span>{{ . }}</span>
+            {{- end }}
+            {{- end }}
+        </div>
+
+        <div class="blog-post__content">
+            {{ .Content }}
+        </div>
+
+        {{- if .Params.tags }}
+        <div class="blog-post__tags">
+            {{- range .Params.tags }}
+            <span>{{ . }}</span>
+            {{- end }}
+        </div>
+        {{- end }}
+
+        <!-- Comments (Giscus — GitHub Discussions) -->
+        <div class="blog-post__comments">
+            <h3>Comments</h3>
+            <script src="https://giscus.app/client.js"
+                data-repo="{{ .Site.Params.giscus.repo }}"
+                data-repo-id="{{ .Site.Params.giscus.repoId }}"
+                data-category="{{ .Site.Params.giscus.category }}"
+                data-category-id="{{ .Site.Params.giscus.categoryId }}"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="transparent_dark"
+                data-lang="en"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </div>
+
+    </div>
+
+{{ end }}

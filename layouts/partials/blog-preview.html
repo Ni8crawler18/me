@@ -1,0 +1,39 @@
+            <!-- ### blog
+            ================================================== -->
+            <section id="blog" class="s-blog target-section">
+
+                <div class="row blog-content" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Blog
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Notes on things I've built, broken, and figured out.
+                        </p>
+
+                        <div class="blog-grid" data-animate-el>
+
+                            {{- $posts := where .Site.RegularPages "Section" "blog" }}
+                            {{- $published := where $posts ".Draft" false }}
+
+                            {{- range first 3 $published }}
+                            <article class="blog-card">
+                                <a href="{{ .RelPermalink }}">
+                                    <div class="blog-card__date">{{ .Date.Format "January 2006" }}</div>
+                                    <h3 class="blog-card__title">{{ .Title }}</h3>
+                                    <p class="blog-card__text">{{ .Params.summary }}</p>
+                                    {{- range first 1 .Params.tags }}
+                                    <span class="blog-card__tag">{{ . }}</span>
+                                    {{- end }}
+                                </a>
+                            </article>
+                            {{- end }}
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section> <!-- end s-blog -->

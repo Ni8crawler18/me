@@ -1,0 +1,13 @@
+                                <div class="testimonial-slider__slide swiper-slide">
+                                    <div class="testimonial-slider__author">
+                                        <cite class="testimonial-slider__cite">
+                                            <strong>{{ .name }}</strong>
+                                            <span>{{ .award }}</span>
+                                        </cite>
+                                    </div>
+                                    <p>
+                                    {{ .description }}
+                                    </p>
+                                    <a href="{{ .pressLink }}" class="hackathon-press-link" target="_blank">{{ .pressText }} &rarr;</a>
+                                    <img src="{{ .image | relURL }}" alt="{{ .imageAlt }}" class="hackathon-img">
+                                </div>
