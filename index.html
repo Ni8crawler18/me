@@ -83,6 +83,63 @@
             .folio-list__proj-links { display: none; }
         }
 
+        /* --- Blog section --- */
+        .s-blog {
+            padding-top: var(--vspace-3);
+            padding-bottom: var(--vspace-3);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: var(--vspace-1_5);
+        }
+        .blog-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: border-color 0.3s ease;
+        }
+        .blog-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .blog-card__date {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-1);
+            margin-bottom: 0.75rem;
+        }
+        .blog-card__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+        .blog-card__text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1rem;
+        }
+        .blog-card__tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 3px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        @media screen and (max-width: 900px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media screen and (max-width: 500px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+
         /* --- Project card icon links --- */
         .folio-list__item {
             position: relative;
@@ -151,6 +208,7 @@
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#blog" class="smoothscroll">Blog</a></li>
                         <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
                     </ul>
                 </nav>
@@ -215,6 +273,7 @@
                                 broadcasts. Most of these were hackathon entries that ended up winning.
                             </p>
                             <a href="https://github.com/Ni8crawler18" class="btn btn--medium u-fullwidth" data-animate-el>GitHub</a>
+                            <a href="Resume_AI_Researcher.pdf" target="_blank" class="btn btn--medium u-fullwidth" data-animate-el style="margin-top: 1rem;">Resume</a>
 
                         </div>
                     </div>
@@ -661,6 +720,51 @@
                 </div> <!-- end row testimonials -->
 
             </section> <!-- end s-works -->
+
+
+            <!-- ### blog
+            ================================================== -->
+            <section id="blog" class="s-blog target-section">
+
+                <div class="row blog-content" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Blog
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Notes on things I've built, broken, and figured out.
+                        </p>
+
+                        <div class="blog-grid" data-animate-el>
+
+                            <article class="blog-card">
+                                <div class="blog-card__date">Coming Soon</div>
+                                <h3 class="blog-card__title">ZK Attestations for Indian KYC</h3>
+                                <p class="blog-card__text">Why most KYC flows only need a boolean answer, and how Circom + Groth16 can replace raw Aadhaar data sharing.</p>
+                                <span class="blog-card__tag">ZK Proofs</span>
+                            </article>
+
+                            <article class="blog-card">
+                                <div class="blog-card__date">Coming Soon</div>
+                                <h3 class="blog-card__title">Quantum vs Classical IDS</h3>
+                                <p class="blog-card__text">Benchmarking a 4-qubit VQC against XGBoost on NetFlow data. Where quantum helps, where it doesn't.</p>
+                                <span class="blog-card__tag">Quantum ML</span>
+                            </article>
+
+                            <article class="blog-card">
+                                <div class="blog-card__date">Coming Soon</div>
+                                <h3 class="blog-card__title">Serving Gemma 3 12B at Scale</h3>
+                                <p class="blog-card__text">Running 11 NLP packages on vLLM for 10K posts/day &mdash; batching, memory management, and latency tradeoffs.</p>
+                                <span class="blog-card__tag">LLM Inference</span>
+                            </article>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section> <!-- end s-blog -->
 
 
             <!-- ### contact
