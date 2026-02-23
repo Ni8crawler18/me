@@ -9,7 +9,7 @@ tags:
   - "Production ML"
 ---
 
-At Saptang Labs, we serve 11 transformer-based NLP packages through a single Gemma 3 12B instance running on vLLM. The system processes approximately 10,000 posts per day for law enforcement analysis.
+At Saptang Labs, we serve 11 transformer-based NLP packages through a single Gemma 3 12B instance running on vLLM. The system processes approximately 10,000 posts per day.
 
 ## The architecture
 
