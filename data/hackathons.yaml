@@ -6,6 +6,21 @@
   image: "images/hackathons/glofsense.jpg"
   imageAlt: "C-DAC HimaShield 2025"
 
+- name: "NFSU Forensic Hackathon 2023"
+  award: "Winner — Rs 5,00,000"
+  description: "Entity extraction and cross-source linking tool built at NFSU Gandhinagar. Extracts entities from documents and conversation transcripts, then resolves connections across sources."
+  pressLink: "https://www.nfsu.ac.in/details/67"
+  pressText: "NFSU Coverage"
+  image: "images/hackathons/forensic_23.png"
+  imageAlt: "NFSU Forensic Hackathon 2023"
+
+- name: "NFSU Forensic Hackathon 2025"
+  award: "Winner — Rs 1,00,000"
+  description: "Nirnay — flags misinformation in live TV/radio. FFMPEG capture, Whisper transcription, DistilBERT claim extraction, Fact Check API verification."
+  pressLink: "https://aifsc.nfsu.ac.in/hackathon"
+  pressText: "AIFSC Hackathon"
+  image: "images/hackathons/forensic_25.jpg"
+  imageAlt: "NFSU Forensic Hackathon 2025 — Nirnay"
 
 - name: "Indian Army Terrier Cyber Quest 2025"
   award: "3rd Prize — QML Threat Detection"
