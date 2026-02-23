@@ -19,18 +19,13 @@ title = 'Venkatesh'
   github = "https://github.com/Ni8crawler18"
   linkedin = "https://www.linkedin.com/in/ni8crawler"
 
-  # Giscus comments (GitHub Discussions)
-  # To set up: go to https://giscus.app, enter your repo, and fill in the values below
   [params.giscus]
     repo = "Ni8crawler18/me"
     repoId = "R_kgDOM8oe0Q"
     category = "Blog Comments"
     categoryId = "DIC_kwDOM8oe0c4C2ufG"
 
-  # Umami analytics (privacy-friendly, no cookies)
-  # Option 1: Use Umami Cloud — sign up at https://cloud.umami.is (free tier)
-  # Option 2: Self-host — https://github.com/umami-software/umami
-  # Fill in your values after setup:
   [params.umami]
     src = "https://cloud.umami.is/script.js"
-    websiteId = "b93f3555-22c0-4246-94d3-013bade790bc"
+    websiteId = "b93f3555-22c0-4246-94
+    d3-013bade790bc"
