@@ -1,3 +1,11 @@
+- name: "Cyber Security Innovation Challenge 1.0"
+  award: "Winner — Rs 10,00,000"
+  description: "Xylem — privacy-preserving KYC built on zk-SNARKs. Computes eligibility predicates on-device using Aadhaar-based verifiable credentials, emitting concise Boolean attestations with zero PII exposure. DPDP Act aligned. Won as Team Eigen."
+  pressLink: "https://www.dsci.in/files/content/press-release/2026/press-release_csicgrand-finale.pdf"
+  pressText: "DSCI Press Release"
+  image: "images/hackathons/CSIC_26.jpeg"
+  imageAlt: "Cyber Security Innovation Challenge 1.0 — Team Eigen"
+
 - name: "C-DAC HimaShield Grand Challenge 2025"
   award: "Winner — Rs 5,00,000"
   description: "Glofsense — GLOF prediction using Sentinel-1 SAR, LSTM for temporal patterns, XGBoost for risk scoring, ESP32 sensors for ground truth. Covered by PIB."
