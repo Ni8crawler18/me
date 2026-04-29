@@ -279,6 +279,22 @@
     border-radius: 6px;
     margin: 1.25rem 0;
 }
+.sketch-diagram {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+.sketch-diagram svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.sketch-diagram figcaption {
+    margin-top: 0.75rem;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
 .blog-post__content ul,
 .blog-post__content ol {
     margin-bottom: 1.25rem;

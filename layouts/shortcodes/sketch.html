@@ -1,0 +1,10 @@
+{{- $name := .Get 0 -}}
+{{- $caption := .Get 1 -}}
+{{- $path := printf "static/images/blog/diagrams/%s.svg" $name -}}
+{{- $svg := readFile $path -}}
+<figure class="sketch-diagram">
+  {{ $svg | safeHTML }}
+  {{- with $caption }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

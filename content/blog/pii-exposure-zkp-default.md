@@ -18,6 +18,8 @@ This post argues that PII exposure is a *collection* problem, not a *storage* pr
 
 Once a system collects a piece of PII, it enters a lifecycle that almost always ends in exposure. The interesting question is not *if* but *when* and *how much*.
 
+{{< sketch "pii-lifecycle" "Every stage between collection and leakage adds attack surface — and most of them are governance problems no encryption fixes." >}}
+
 A typical Indian fintech onboarding flow collects:
 
 - Aadhaar XML (name, DOB, address, photo, gender, mobile hash)
