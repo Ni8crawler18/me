@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="xylem-flow-title xylem-flow-desc">
+  <title id="xylem-flow-title">Xylem In-Browser ZK KYC Flow</title>
+  <desc id="xylem-flow-desc">Two parallel inputs (Aadhaar XML signed by UIDAI, and the well-known UIDAI public key) converge into a Circom circuit, which generates a Groth16 proof in-browser. The proof is the only thing sent to the relying party.</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="17" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+    <filter id="sketch-strong" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="19" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Xylem — In-Browser ZK KYC</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">Aadhaar in, boolean attestation out — nothing else leaves the browser</text>
+
+  <!-- Browser boundary box (dashed) -->
+  <g filter="url(#sketch)" fill="none">
+    <rect x="40" y="92" width="640" height="500" rx="10" stroke="rgba(234,190,123,0.4)" stroke-width="1.6" stroke-dasharray="8 5" fill="none"/>
+  </g>
+  <text x="58" y="112" font-size="14" fill="rgba(234,190,123,0.7)" font-style="italic">USER'S BROWSER</text>
+
+  <!-- Two parallel input boxes -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="80" y="130" width="240" height="62" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <rect x="400" y="130" width="240" height="62" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <!-- Convergence arrows -->
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 200 192 Q 240 222 320 248"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 520 192 Q 480 222 400 248"/>
+  </g>
+
+  <g text-anchor="middle" fill="#ffffff">
+    <text x="200" y="158" font-size="19">Aadhaar XML</text>
+    <text x="200" y="180" font-size="14" fill="rgba(255,255,255,0.6)" font-style="italic">signed by UIDAI</text>
+
+    <text x="520" y="158" font-size="19">UIDAI public key</text>
+    <text x="520" y="180" font-size="14" fill="rgba(255,255,255,0.6)" font-style="italic">well-known constant</text>
+  </g>
+
+  <!-- Convergence: Circom Circuit -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="180" y="248" width="360" height="78" rx="6" stroke="#EABE7B" stroke-width="3" fill="rgba(234,190,123,0.12)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 360 326 L 360 354 M 354 346 L 360 356 L 366 346"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="360" y="280" font-size="22" fill="#ffffff">CIRCOM CIRCUIT</text>
+    <text x="360" y="306" font-size="15" fill="rgba(255,255,255,0.7)" font-style="italic">verify signature  +  check predicate (age ≥ 18)</text>
+  </g>
+
+  <!-- Witness generation -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="210" y="356" width="300" height="50" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 360 406 L 360 432 M 354 424 L 360 434 L 366 424"/>
+  </g>
+  <text x="360" y="385" font-size="17" fill="#ffffff" text-anchor="middle">witness generation (~100 ms)</text>
+
+  <!-- Groth16 proof generation (emphasized) -->
+  <g filter="url(#sketch-strong)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="180" y="434" width="360" height="78" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 360 512 L 360 538 M 354 530 L 360 540 L 366 530"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="360" y="466" font-size="22" fill="#ffffff">GROTH16 PROOF GEN</text>
+    <text x="360" y="492" font-size="15" fill="rgba(234,190,123,0.85)" font-style="italic">WASM, ~500 ms, &lt; 1 KB output</text>
+  </g>
+
+  <!-- Browser exit boundary -->
+  <text x="360" y="556" font-size="14" fill="rgba(255,140,112,0.85)" text-anchor="middle" font-style="italic">↓  proof leaves browser  ↓</text>
+
+  <!-- Verifier (outside browser boundary) -->
+  <g filter="url(#sketch-strong)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="160" y="610" width="400" height="80" rx="6" stroke="#FF6B47" stroke-width="3.5" fill="rgba(255,107,71,0.13)"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="360" y="642" font-size="22" fill="#FF8C70">RELYING PARTY VERIFIER</text>
+    <text x="360" y="667" font-size="14" fill="rgba(255,140,112,0.85)" font-style="italic">verify(proof) → true · stores { predicate, hash, ts }</text>
+  </g>
+</svg>

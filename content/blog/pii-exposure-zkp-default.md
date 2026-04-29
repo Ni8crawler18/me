@@ -72,11 +72,15 @@ POST /verify_predicate { predicate: "age >= 18", proof: 0x... }
 
 The compliance record is *the proof*, not the underlying data. The proof is non-malleable, timestamped, and contains zero information about the inputs. You have audit-grade evidence and zero PII.
 
+{{< sketch "traditional-vs-zkp" "Same Aadhaar input, two architectures: one stores everything and waits to be breached; the other stores a proof and has nothing to lose." >}}
+
 This is not a quantitative improvement over encryption — it is a qualitatively different threat model. The breach scenario becomes uninteresting because there is nothing of value to leak.
 
 ## The Predicate Patterns That Cover 80% of PII Use Cases
 
 Most production PII use cases reduce to one of four ZK predicate patterns. Each has well-understood circuits and library support today.
+
+{{< sketch "four-predicate-patterns" "Range, set membership, hash preimage, and aggregations — composable building blocks for nearly every PII verification need." >}}
 
 ### 1. Range Proofs — "Value is in interval [a, b]"
 

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="four-pred-title four-pred-desc">
+  <title id="four-pred-title">Four Predicate Patterns That Cover 80% of PII Use Cases</title>
+  <desc id="four-pred-desc">A 1-to-4 fan-out: starting from the question "what does the verifier actually need?", branching into four ZK predicate patterns: Range Proofs, Set Membership, Hash Preimage, and Aggregations.</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="9" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Four Predicate Patterns</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">most production PII use cases reduce to one of these four shapes</text>
+
+  <!-- Root question -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="220" y="92" width="280" height="50" rx="6" stroke="#ffffff" stroke-width="2.2" fill="rgba(255,255,255,0.06)"/>
+    <!-- 4 fan-out branch lines -->
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 280 142 Q 200 175 95 200"/>
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 330 142 Q 290 175 268 200"/>
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 390 142 Q 430 175 452 200"/>
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 440 142 Q 520 175 625 200"/>
+  </g>
+  <text x="360" y="123" font-size="19" fill="#ffffff" text-anchor="middle">what does the verifier actually need?</text>
+
+  <!-- Four pattern boxes -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="20" y="200" width="160" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <rect x="193" y="200" width="160" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <rect x="367" y="200" width="160" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <rect x="540" y="200" width="160" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+  </g>
+
+  <!-- Pattern titles + formulas -->
+  <g text-anchor="middle">
+    <text x="100" y="232" font-size="19" fill="#ffffff">RANGE</text>
+    <text x="100" y="252" font-size="19" fill="#ffffff">PROOFS</text>
+    <text x="100" y="278" font-size="14" fill="#EABE7B" font-style="italic">value ∈ [a, b]</text>
+
+    <text x="273" y="232" font-size="19" fill="#ffffff">SET</text>
+    <text x="273" y="252" font-size="19" fill="#ffffff">MEMBERSHIP</text>
+    <text x="273" y="278" font-size="14" fill="#EABE7B" font-style="italic">value ∈ S</text>
+
+    <text x="447" y="232" font-size="19" fill="#ffffff">HASH</text>
+    <text x="447" y="252" font-size="19" fill="#ffffff">PREIMAGE</text>
+    <text x="447" y="278" font-size="14" fill="#EABE7B" font-style="italic">know x : H(x) = y</text>
+
+    <text x="620" y="232" font-size="19" fill="#ffffff">AGGREGATIONS</text>
+    <text x="620" y="252" font-size="19" fill="#ffffff"></text>
+    <text x="620" y="278" font-size="14" fill="#EABE7B" font-style="italic">Σ / avg / count → P</text>
+  </g>
+
+  <!-- Examples below each box -->
+  <g text-anchor="middle" font-size="14" fill="rgba(255,255,255,0.6)">
+    <text x="100" y="318">age ≥ 18</text>
+    <text x="100" y="338">income &lt; threshold</text>
+    <text x="100" y="358">balance &gt; min</text>
+
+    <text x="273" y="318">in UIDAI database</text>
+    <text x="273" y="338">on revocation list?</text>
+    <text x="273" y="358">in allowlist</text>
+
+    <text x="447" y="318">signed credentials</text>
+    <text x="447" y="338">passwordless auth</text>
+    <text x="447" y="358">prove key ownership</text>
+
+    <text x="620" y="318">avg balance ≥ X</text>
+    <text x="620" y="338">count txns ≥ N</text>
+    <text x="620" y="358">ESG footprint ≤ Y</text>
+  </g>
+
+  <!-- Library hint row -->
+  <g text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.4)" font-style="italic">
+    <text x="100" y="395">Bulletproofs · Groth16</text>
+    <text x="273" y="395">Merkle + SNARK</text>
+    <text x="447" y="395">Poseidon · MiMC</text>
+    <text x="620" y="395">composes the other 3</text>
+  </g>
+
+  <!-- Bottom callout box -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="120" y="445" width="480" height="58" rx="6" stroke="rgba(234,190,123,0.5)" stroke-width="1.8" fill="rgba(234,190,123,0.05)" stroke-dasharray="6 4"/>
+  </g>
+  <text x="360" y="472" font-size="17" fill="#ffffff" text-anchor="middle">all four are composable —</text>
+  <text x="360" y="492" font-size="15" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-style="italic">prove age ≥ 18 AND in-state AND income bracket in a single proof</text>
+</svg>

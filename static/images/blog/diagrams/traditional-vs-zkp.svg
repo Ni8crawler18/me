@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="trad-vs-zkp-title trad-vs-zkp-desc">
+  <title id="trad-vs-zkp-title">Traditional KYC vs ZKP Flow</title>
+  <desc id="trad-vs-zkp-desc">Side-by-side comparison: same Aadhaar input branches into a traditional flow (full PII exposure) versus a ZKP flow (boolean attestation, zero PII at the verifier).</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+    <filter id="sketch-strong" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Traditional vs ZKP — Same Decision, Different Exposure</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">one user, one verification, two architectures</text>
+
+  <!-- Source node + branches -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="270" y="92" width="180" height="50" rx="6" stroke="#ffffff" stroke-width="2.2" fill="rgba(255,255,255,0.06)"/>
+    <!-- Branch lines fan out -->
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 320 142 Q 280 168 200 198"/>
+    <path stroke="rgba(255,255,255,0.55)" stroke-width="2" d="M 400 142 Q 440 168 520 198"/>
+  </g>
+  <text x="360" y="123" font-size="20" fill="#ffffff" text-anchor="middle">Aadhaar XML on device</text>
+
+  <!-- Headers -->
+  <text x="200" y="190" font-size="18" fill="rgba(255,107,71,0.9)" text-anchor="middle">TRADITIONAL FLOW</text>
+  <text x="520" y="190" font-size="18" fill="#EABE7B" text-anchor="middle">ZK FLOW</text>
+
+  <!-- Stage boxes for both columns -->
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- LEFT column: Traditional -->
+    <rect x="80" y="200" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 200 260 L 200 282 M 194 275 L 200 284 L 206 275"/>
+
+    <rect x="80" y="286" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 200 346 L 200 368 M 194 361 L 200 370 L 206 361"/>
+
+    <rect x="80" y="372" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,107,71,0.85)" stroke-width="2.4" d="M 200 432 L 200 456 M 193 448 L 200 458 L 207 448"/>
+
+    <!-- RIGHT column: ZKP -->
+    <rect x="400" y="200" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 520 260 L 520 282 M 514 275 L 520 284 L 526 275"/>
+
+    <rect x="400" y="286" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.6)" stroke-width="2" d="M 520 346 L 520 368 M 514 361 L 520 370 L 526 361"/>
+
+    <rect x="400" y="372" width="240" height="58" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="#EABE7B" stroke-width="2.4" d="M 520 432 L 520 456 M 513 448 L 520 458 L 527 448"/>
+  </g>
+
+  <!-- Terminal boxes -->
+  <g filter="url(#sketch-strong)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="80" y="462" width="240" height="78" rx="6" stroke="#FF6B47" stroke-width="3.5" fill="rgba(255,107,71,0.13)"/>
+    <rect x="400" y="462" width="240" height="78" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.16)"/>
+  </g>
+
+  <!-- Stage labels (LEFT) -->
+  <g text-anchor="middle" fill="#ffffff" font-size="17">
+    <text x="200" y="234">Send raw Aadhaar XML</text>
+    <text x="200" y="320">Receive full PII payload</text>
+    <text x="200" y="406">Store every field collected</text>
+  </g>
+  <!-- Stage labels (RIGHT) -->
+  <g text-anchor="middle" fill="#ffffff" font-size="17">
+    <text x="520" y="234">Compute predicate on device</text>
+    <text x="520" y="320">Emit boolean + proof (~1KB)</text>
+    <text x="520" y="406">Verifier checks proof (~10ms)</text>
+  </g>
+
+  <!-- Terminal labels -->
+  <g text-anchor="middle">
+    <text x="200" y="497" font-size="24" fill="#FF8C70">EXPOSED</text>
+    <text x="200" y="522" font-size="14" fill="rgba(255,140,112,0.78)">every byte = liability</text>
+
+    <text x="520" y="497" font-size="24" fill="#EABE7B">ZERO PII</text>
+    <text x="520" y="522" font-size="14" fill="rgba(234,190,123,0.78)">predicate, not record</text>
+  </g>
+
+  <!-- Bottom callout -->
+  <text x="360" y="585" font-size="16" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-style="italic">audit record on the right is the proof itself — no underlying data to leak</text>
+</svg>

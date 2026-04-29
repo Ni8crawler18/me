@@ -107,6 +107,8 @@ STARKs require **no trusted setup at all**. They rely on hash functions instead 
 
 ## Comparison Table
 
+{{< sketch "proving-systems-tree" "Three production-ready families. The right pick depends on which constraint hurts most — proof size, setup ceremony, or post-quantum threat." >}}
+
 | Property | Groth16 | PLONK | STARKs |
 |---|---|---|---|
 | Proof size | ~128 B | ~500 B | ~50-200 KB |
@@ -118,13 +120,9 @@ STARKs require **no trusted setup at all**. They rely on hash functions instead 
 
 ## Implementation: ZK KYC with Circom + Groth16
 
-Here's how we implemented it for Xylem. The flow:
+Here's how we implemented it for Xylem — the Aadhaar XML never leaves the browser, only the proof does:
 
-1. User loads their Aadhaar XML (signed by UIDAI) in the browser
-2. Circom circuit verifies the XML signature and checks the predicate
-3. Groth16 proof generated client-side via WASM
-4. Proof sent to relying party — ~1KB, verifiable in 10-50ms
-5. Relying party never sees the underlying data
+{{< sketch "xylem-flow" "Two inputs converge into a Circom circuit, which compiles down to a Groth16 proof generated entirely client-side. The relying party only ever sees the proof." >}}
 
 ### The Circuit
 
