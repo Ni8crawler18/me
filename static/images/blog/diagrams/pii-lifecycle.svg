@@ -14,8 +14,8 @@
   </defs>
 
   <style>
-    .sketch-diagram svg text { font-family: 'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive; }
-    text { font-family: 'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive; }
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
   </style>
 
   <!-- ───── Title ───── -->
