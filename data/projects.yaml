@@ -95,3 +95,17 @@
     - "GitHub CLI"
     - "Python / Bash"
     - "ZKP + Rust ML"
+
+- id: "08"
+  title: "Lamina."
+  category: "Agentic AI / Tokenized RWAs"
+  image: "images/portfolio/lamina-gh.png"
+  galleryImage: "images/portfolio/lamina-gh.png"
+  github: "https://github.com/Ni8crawler18/lamina"
+  live: ""
+  modalTitle: "Lamina — Autonomous RWA Agent on Hedera"
+  modalDesc: "Autonomous AI agent that manages the full lifecycle of tokenized real-world assets on Hedera. A single natural language command tokenizes a bond; the agent then orchestrates KYC/OFAC compliance screening, coupon distribution, NAV updates, regulatory reporting, and maturity settlement — executing each stage without further human input. The goal is to collapse the operational layer that traditionally surrounds bond issuance into a single agentic loop. 3rd Place, Hedera Hello Future: Apex Hackathon (DeFi Track, $8,000)."
+  tags:
+    - "Agentic AI"
+    - "Hedera / RWA"
+    - "KYC / OFAC Compliance"
