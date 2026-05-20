@@ -181,6 +181,10 @@
     margin-bottom: 1rem;
 }
 
+.about-info__pic {
+    margin-top: 34px;
+}
+
 /* --- Blog post typography (single post pages) --- */
 .blog-post {
     max-width: 740px;
