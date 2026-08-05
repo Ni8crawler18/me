@@ -12,7 +12,7 @@ title = 'Venkatesh'
       unsafe = true
 
 [params]
-  description = "Venkatesh R — ML infrastructure, inference pipelines, and NLP systems. Currently at Saptang Labs."
+  description = "Venkatesh R — AI infrastructure, ML inference pipelines, and NLP systems. Building an AI Gateway for LLM agents at Bluink."
   author = "Venkatesh R"
   email = "hessiancurve@gmail.com"
   phone = "+91 8668135371"
