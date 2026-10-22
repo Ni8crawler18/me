@@ -8,6 +8,6 @@
                                     <p>
                                     {{ .description }}
                                     </p>
-                                    <a href="{{ .pressLink }}" class="hackathon-press-link" target="_blank" rel="noopener noreferrer">{{ .pressText }} &rarr;</a>
-                                    <img src="{{ .image | relURL }}" alt="{{ .imageAlt }}" class="hackathon-img">
+                                    {{ with .pressLink }}<a href="{{ . }}" class="hackathon-press-link" target="_blank" rel="noopener noreferrer">{{ $.pressText }} &rarr;</a>{{ end }}
+                                    {{ with .image }}<img src="{{ . | relURL }}" alt="{{ $.imageAlt }}" class="hackathon-img">{{ end }}
                                 </div>
