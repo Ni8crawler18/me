@@ -5,7 +5,7 @@
   galleryImage: "images/portfolio/glofsense-gh.png"
   github: "https://github.com/Ni8crawler18/Glofsense"
   live: ""
-  modalTitle: "Glofsense — GLOF Early Warning"
+  modalTitle: "Glofsense: GLOF Early Warning"
   modalDesc: "End-to-end pipeline for glacial lake outburst flood prediction. Sentinel-1 SAR imagery is processed to track surface deformation; temporal sequences are modeled through an LSTM to capture ice-melt dynamics. XGBoost classifies risk levels on fused feature vectors. An ESP32 sensor array (water level, temperature, flow rate) provides real-time ground truth calibration. Downstream module simulates water flow to compute evacuation corridors and time-to-impact estimates. Won C-DAC HimaShield Grand Challenge 2025 (Rs 5,00,000). Covered in Press Information Bureau release."
   tags:
     - "LSTM / XGBoost"
@@ -19,7 +19,7 @@
   galleryImage: "images/portfolio/eigencurve-gh.png"
   github: "https://github.com/Ni8crawler18/Eigencurve"
   live: ""
-  modalTitle: "Eigencurve — Quantum-Classical IDS"
+  modalTitle: "Eigencurve: Quantum-Classical IDS"
   modalDesc: "Hybrid quantum-classical intrusion detection system. A 4-qubit variational quantum circuit (PennyLane, angle embedding, strongly entangling layers) is trained on CICIDS NetFlow features and benchmarked against XGBoost and LightGBM. The objective was to evaluate whether parameterized quantum circuits offer any advantage on non-linear decision boundaries in high-dimensional traffic data. VirusTotal API handles IOC enrichment and threat correlation. Stack: Next.js frontend, FastAPI backend. 3rd Prize, Indian Army Terrier Cyber Quest 2025."
   tags:
     - "VQC / PennyLane"
@@ -33,7 +33,7 @@
   galleryImage: "images/portfolio/nirnay-gh.png"
   github: "https://github.com/Ni8crawler18/Nirnay"
   live: "https://nirnay-labs.vercel.app/"
-  modalTitle: "Nirnay — Real-Time Broadcast Fact-Checking"
+  modalTitle: "Nirnay: Real-Time Broadcast Fact-Checking"
   modalDesc: "Streaming pipeline for misinformation detection in live broadcasts. FFMPEG ingests TV/radio feeds, Whisper handles ASR with timestamp alignment, DistilBERT extracts verifiable claims from transcript segments, and Google Fact Check API cross-references them against indexed databases. Claims are scored with confidence metrics and surfaced on a Streamlit dashboard with source attribution. Designed for newsroom and regulatory deployment. Winner, NFSU Forensic Hackathon 2025 (Rs 1,00,000)."
   tags:
     - "Whisper ASR"
@@ -47,7 +47,7 @@
   galleryImage: "images/portfolio/xylem-gh.png"
   github: "https://github.com/Ni8crawler18/Xylem"
   live: "https://eigenparse.com"
-  modalTitle: "Xylem — Zero-Knowledge KYC"
+  modalTitle: "Xylem: Zero-Knowledge KYC"
   modalDesc: "Privacy-preserving identity verification over Aadhaar credentials using ZK-SNARKs. Circom arithmetic circuits with Groth16 proving system let users attest to predicates (age ≥ 18, valid document, state residency) without revealing the underlying data. Proof generation in-browser via WASM in ~500ms, server-side verification in ~10–50ms, proof size < 1KB. The goal is to replace KYC flows that needlessly consume private data with a single boolean attestation. Designed around DPDP Act 2023 requirements."
   tags:
     - "ZK-SNARKs / Groth16"
@@ -61,8 +61,8 @@
   galleryImage: "images/portfolio/phloem-gh.png"
   github: "https://github.com/Ni8crawler18/Phloem"
   live: "https://eigensparse.com"
-  modalTitle: "Phloem — ZK Consent Infrastructure"
-  modalDesc: "Consent management layer built on the same principle as Xylem: if a workflow only needs a yes/no answer, it should not require raw personal data. Implements field-level access control, versioned consent records with cryptographic audit trails, and automated DPDP Act compliance reporting. API-first architecture — consent policies are defined as code with pluggable storage backends."
+  modalTitle: "Phloem: ZK Consent Infrastructure"
+  modalDesc: "Consent management layer built on the same principle as Xylem: if a workflow only needs a yes/no answer, it should not require raw personal data. Implements field-level access control, versioned consent records with cryptographic audit trails, and automated DPDP Act compliance reporting. API-first architecture, consent policies are defined as code with pluggable storage backends."
   tags:
     - "ZK Proofs"
     - "Policy-as-Code"
@@ -75,8 +75,8 @@
   galleryImage: "images/portfolio/xgboost-gh.png"
   github: "https://github.com/Ni8crawler18/XG_boost_classifier"
   live: ""
-  modalTitle: "XGBoostClassifier — GST Fraud Detection"
-  modalDesc: "Binary classifier for the GST Hackathon — trained on ~700K taxpayer records with 21 attributes to detect fraudulent filings. Pipeline: missing-value imputation, feature scaling, RandomizedSearchCV over 100 iterations for hyperparameter tuning. Evaluated on accuracy, precision, recall, F1, AUC-ROC, log loss, calibration curves, and cumulative gain/lift charts. SHAP feature importance analysis identifies which attributes are most predictive of fraud."
+  modalTitle: "XGBoostClassifier: GST Fraud Detection"
+  modalDesc: "Binary classifier for the GST Hackathon, trained on ~700K taxpayer records with 21 attributes to detect fraudulent filings. Pipeline: missing-value imputation, feature scaling, RandomizedSearchCV over 100 iterations for hyperparameter tuning. Evaluated on accuracy, precision, recall, F1, AUC-ROC, log loss, calibration curves, and cumulative gain/lift charts. SHAP feature importance analysis identifies which attributes are most predictive of fraud."
   tags:
     - "XGBoost"
     - "SHAP"
@@ -89,8 +89,8 @@
   galleryImage: "images/portfolio/oss-scout-gh.png"
   github: "https://github.com/Ni8crawler18/oss-scout"
   live: ""
-  modalTitle: "oss-scout — OSS Contribution Discovery"
-  modalDesc: "Daily open source contribution discovery and workflow tool targeting ZKP and Rust ML repositories. Scans 10+ repos across arkworks, SP1, EZKL, Candle, and Burn — fetches open issues via GitHub CLI, scores them by contributor-friendliness (labels, keyword matches, comment count, assignee status, recency), and generates ranked markdown digests. Includes a shell-based workflow helper that automates fork, clone, branch creation, and draft PR submission. Designed to reduce friction for sustained open source contributions."
+  modalTitle: "oss-scout: OSS Contribution Discovery"
+  modalDesc: "Daily open source contribution discovery and workflow tool targeting ZKP and Rust ML repositories. Scans 10+ repos across arkworks, SP1, EZKL, Candle, and Burn, fetches open issues via GitHub CLI, scores them by contributor-friendliness (labels, keyword matches, comment count, assignee status, recency), and generates ranked markdown digests. Includes a shell-based workflow helper that automates fork, clone, branch creation, and draft PR submission. Designed to reduce friction for sustained open source contributions."
   tags:
     - "GitHub CLI"
     - "Python / Bash"
@@ -103,8 +103,8 @@
   galleryImage: "images/portfolio/lamina-gh.png"
   github: "https://github.com/Ni8crawler18/lamina"
   live: ""
-  modalTitle: "Lamina — Autonomous RWA Agent on Hedera"
-  modalDesc: "Autonomous AI agent that manages the full lifecycle of tokenized real-world assets on Hedera. A single natural language command tokenizes a bond; the agent then orchestrates KYC/OFAC compliance screening, coupon distribution, NAV updates, regulatory reporting, and maturity settlement — executing each stage without further human input. The goal is to collapse the operational layer that traditionally surrounds bond issuance into a single agentic loop. 3rd Place, Hedera Hello Future: Apex Hackathon (DeFi Track, $8,000)."
+  modalTitle: "Lamina: Autonomous RWA Agent on Hedera"
+  modalDesc: "Autonomous AI agent that manages the full lifecycle of tokenized real-world assets on Hedera. A single natural language command tokenizes a bond; the agent then orchestrates KYC/OFAC compliance screening, coupon distribution, NAV updates, regulatory reporting, and maturity settlement, executing each stage without further human input. The goal is to collapse the operational layer that traditionally surrounds bond issuance into a single agentic loop. 3rd Place, Hedera Hello Future: Apex Hackathon (DeFi Track, $8,000)."
   tags:
     - "Agentic AI"
     - "Hedera / RWA"

@@ -8,11 +8,11 @@ tags:
   - "Tag2"
 ---
 
-Opening hook — the contrarian claim a thoughtful reader would push back on.
+Opening hook, the contrarian claim a thoughtful reader would push back on.
 
 ## Section heading
 
-Regular paragraph text. Mix paragraphs with diagrams, code, and tables — avoid more than ~4 paragraphs in a row.
+Regular paragraph text. Mix paragraphs with diagrams, code, and tables, avoid more than ~4 paragraphs in a row.
 
 ### Subsection
 

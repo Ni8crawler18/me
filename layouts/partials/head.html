@@ -1,5 +1,5 @@
     <meta charset="utf-8">
-    <title>{{ if .IsHome }}Venkatesh{{ else }}{{ .Title }} — Venkatesh{{ end }}</title>
+    <title>{{ if .IsHome }}Venkatesh{{ else }}{{ .Title }} | Venkatesh{{ end }}</title>
     <meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <!-- Open Graph -->
     <meta property="og:site_name" content="Venkatesh">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-    <meta property="og:title" content="{{ if .IsHome }}Venkatesh — {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:title" content="{{ if .IsHome }}Venkatesh: {{ .Site.Params.description }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "images/about-photo.jpg" | absURL }}">

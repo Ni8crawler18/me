@@ -2,7 +2,7 @@
 title: "ZK Attestations vs Traditional KYC: A Practical Guide"
 date: 2025-02-18
 draft: false
-summary: "Why most KYC flows only need a boolean answer, and how ZK-SNARKs, STARKs, and Groth16 can replace raw data sharing — with implementation tradeoffs."
+summary: "Why most KYC flows only need a boolean answer, and how ZK-SNARKs, STARKs, and Groth16 can replace raw data sharing, with implementation tradeoffs."
 tags:
   - "ZK Proofs"
   - "Privacy"
@@ -11,7 +11,7 @@ tags:
 
 Most KYC flows consuming raw Aadhaar data only need a boolean answer: *Is this person over 18? Is their document valid? Do they reside in state X?*
 
-Yet the standard integration pulls the full XML — name, address, photo, biometrics — into the relying party's database. This is unnecessary data exposure, and it creates a liability surface that scales with every integration partner.
+Yet the standard integration pulls the full XML, name, address, photo, biometrics, into the relying party's database. This is unnecessary data exposure, and it creates a liability surface that scales with every integration partner.
 
 This post covers the problem, the ZK-based alternative, the major proving systems you can use today, and the tradeoffs between them.
 
@@ -21,7 +21,7 @@ Traditional identity verification follows a simple but flawed model:
 
 1. User shares raw personal data (Aadhaar XML, PAN, bank statements)
 2. Relying party extracts the fields they need
-3. Relying party stores everything — including fields they never needed
+3. Relying party stores everything, including fields they never needed
 
 This creates three problems:
 
@@ -29,7 +29,7 @@ This creates three problems:
 - **Liability multiplication**: Every integration partner becomes an attack surface. India saw 1.4 billion records leaked in 2023 alone
 - **Compliance burden**: Under DPDP Act 2023, every byte of personal data stored requires lawful purpose, consent management, and deletion infrastructure
 
-The fix is conceptually simple: if you only need a yes/no answer, you should only receive a yes/no answer — with cryptographic proof that it's correct.
+The fix is conceptually simple: if you only need a yes/no answer, you should only receive a yes/no answer, with cryptographic proof that it's correct.
 
 ## Zero-Knowledge Proofs: The Core Idea
 
@@ -42,7 +42,7 @@ The proof is:
 - **Sound**: If the statement is false, no cheating prover can convince the verifier (except with negligible probability)
 - **Zero-knowledge**: The verifier learns nothing beyond the truth of the statement
 
-For KYC, this means replacing data-heavy workflows with **boolean attestations** — single-bit answers backed by cryptographic guarantees.
+For KYC, this means replacing data-heavy workflows with **boolean attestations**, single-bit answers backed by cryptographic guarantees.
 
 ## Proving Systems: The Landscape
 
@@ -50,7 +50,7 @@ Three families dominate production ZK systems today. Each makes different tradeo
 
 ### Groth16 (zk-SNARKs)
 
-Groth16 is the most deployed SNARK system. It produces the smallest proofs and the fastest verification — but requires a trusted setup ceremony per circuit.
+Groth16 is the most deployed SNARK system. It produces the smallest proofs and the fastest verification, but requires a trusted setup ceremony per circuit.
 
 **How it works**: The prover computes a witness (private inputs satisfying the circuit), then generates an elliptic curve proof using a structured reference string (SRS) from the trusted setup. The verifier checks a pairing equation.
 
@@ -61,15 +61,15 @@ Groth16 is the most deployed SNARK system. It produces the smallest proofs and t
 - Trust assumption: Requires per-circuit trusted setup (toxic waste must be destroyed)
 
 **Libraries**:
-- [Circom](https://docs.circom.io/) + [snarkjs](https://github.com/iden3/snarkjs) — most mature toolchain for Groth16
-- [Arkworks](https://github.com/arkworks-rs) (Rust) — flexible, research-grade
-- [gnark](https://github.com/Consensys/gnark) (Go) — production-focused, fast prover
+- [Circom](https://docs.circom.io/) + [snarkjs](https://github.com/iden3/snarkjs): most mature toolchain for Groth16
+- [Arkworks](https://github.com/arkworks-rs) (Rust): flexible, research-grade
+- [gnark](https://github.com/Consensys/gnark) (Go): production-focused, fast prover
 
-**Best for**: On-chain verification (Ethereum), mobile/browser proving where proof size and verification cost matter. This is what we used for Xylem — in-browser WASM proving in ~500ms.
+**Best for**: On-chain verification (Ethereum), mobile/browser proving where proof size and verification cost matter. This is what we used for Xylem, in-browser WASM proving in ~500ms.
 
 ### PLONK (Universal SNARKs)
 
-PLONK introduced a universal trusted setup — one ceremony works for any circuit up to a given size. This eliminated Groth16's biggest operational headache.
+PLONK introduced a universal trusted setup, one ceremony works for any circuit up to a given size. This eliminated Groth16's biggest operational headache.
 
 **How it works**: Uses a polynomial commitment scheme (KZG) with a single universal SRS. The circuit is compiled into polynomial constraints, and the proof shows these polynomials satisfy the required identities.
 
@@ -80,8 +80,8 @@ PLONK introduced a universal trusted setup — one ceremony works for any circui
 - Trust assumption: Universal trusted setup (one ceremony for all circuits)
 
 **Libraries**:
-- [Halo2](https://github.com/zcash/halo2) (Rust) — Zcash's PLONK variant, no trusted setup with IPA
-- [plonky2](https://github.com/0xPolygonZero/plonky2) (Rust) — Polygon's recursive PLONK, very fast prover
+- [Halo2](https://github.com/zcash/halo2) (Rust): Zcash's PLONK variant, no trusted setup with IPA
+- [plonky2](https://github.com/0xPolygonZero/plonky2) (Rust): Polygon's recursive PLONK, very fast prover
 - [gnark](https://github.com/Consensys/gnark) also supports PLONK
 
 **Best for**: Systems where you update circuits frequently (no new ceremony needed), or where you want a single setup for multiple applications.
@@ -99,15 +99,15 @@ STARKs require **no trusted setup at all**. They rely on hash functions instead 
 - Trust assumption: **None** (transparent setup)
 
 **Libraries**:
-- [Winterfell](https://github.com/facebook/winterfell) (Rust) — Meta's STARK library
-- [Stone](https://github.com/starkware-libs/stone-prover) — StarkWare's production prover
-- [Miden](https://github.com/0xPolygonMiden/miden-vm) — Polygon's STARK VM
+- [Winterfell](https://github.com/facebook/winterfell) (Rust): Meta's STARK library
+- [Stone](https://github.com/starkware-libs/stone-prover): StarkWare's production prover
+- [Miden](https://github.com/0xPolygonMiden/miden-vm): Polygon's STARK VM
 
 **Best for**: Applications where trust minimization is paramount, where proof size doesn't matter (off-chain verification), or where post-quantum security is required.
 
 ## Comparison Table
 
-{{< sketch "proving-systems-tree" "Three production-ready families. The right pick depends on which constraint hurts most — proof size, setup ceremony, or post-quantum threat." >}}
+{{< sketch "proving-systems-tree" "Three production-ready families. The right pick depends on which constraint hurts most, proof size, setup ceremony, or post-quantum threat." >}}
 
 | Property | Groth16 | PLONK | STARKs |
 |---|---|---|---|
@@ -120,7 +120,7 @@ STARKs require **no trusted setup at all**. They rely on hash functions instead 
 
 ## Implementation: ZK KYC with Circom + Groth16
 
-Here's how we implemented it for Xylem — the Aadhaar XML never leaves the browser, only the proof does:
+Here's how we implemented it for Xylem, the Aadhaar XML never leaves the browser, only the proof does:
 
 {{< sketch "xylem-flow" "Two inputs converge into a Circom circuit, which compiles down to a Groth16 proof generated entirely client-side. The relying party only ever sees the proof." >}}
 
@@ -148,7 +148,7 @@ template AgeCheck() {
     monthCheck <== currentMonth - birthMonth;
 
     // Final eligibility: yearDiff >= minAge
-    // (simplified — production circuit handles edge cases)
+    // (simplified, production circuit handles edge cases)
     signal ageOk;
     ageOk <== yearDiff - minAge;
 
@@ -205,14 +205,14 @@ India's Digital Personal Data Protection Act 2023 mandates:
 2. **Data minimization**: Process only what's adequate and relevant
 3. **Storage limitation**: Delete data when the purpose is fulfilled
 
-ZK attestations satisfy all three by construction — no personal data is collected, processed, or stored by the verifier. The proof itself contains zero information about the underlying data.
+ZK attestations satisfy all three by construction, no personal data is collected, processed, or stored by the verifier. The proof itself contains zero information about the underlying data.
 
 This isn't just a technical improvement. It's a fundamentally different compliance posture: instead of building deletion pipelines and consent management for data you shouldn't have collected in the first place, you never collect it.
 
 ## What's Next
 
-We're working on extending this to multi-predicate attestations — proving several properties about a user in a single proof (age AND residency AND income bracket) without revealing any of the underlying values. The circuit complexity grows, but Groth16 proof size stays constant.
+We're working on extending this to multi-predicate attestations, proving several properties about a user in a single proof (age AND residency AND income bracket) without revealing any of the underlying values. The circuit complexity grows, but Groth16 proof size stays constant.
 
-The tooling is maturing fast. Two years ago, writing Circom circuits required deep cryptographic knowledge. Today, libraries like `circomlib` provide tested building blocks for common operations — comparators, hash functions, signature verification — that you compose like Lego.
+The tooling is maturing fast. Two years ago, writing Circom circuits required deep cryptographic knowledge. Today, libraries like `circomlib` provide tested building blocks for common operations, comparators, hash functions, signature verification, that you compose like Lego.
 
-If you're building anything that touches personal data verification, ZK attestations should be your default assumption. The question isn't whether the technology is ready — it is. The question is how quickly existing workflows can be refactored to stop collecting data they never needed.
+If you're building anything that touches personal data verification, ZK attestations should be your default assumption. The question isn't whether the technology is ready. It is. The question is how quickly existing workflows can be refactored to stop collecting data they never needed.

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="agent-fan-title agent-fan-desc">
+  <title id="agent-fan-title">One Site Picture, Many Jobs</title>
+  <desc id="agent-fan-desc">A shared site picture fans out to four agent actions, all converging on a role-scoped audit log.</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="31" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+    <filter id="sketch-strong" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="33" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">One Site Picture, Many Jobs</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">agents act on shared context, inside roles</text>
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="180" y="96" width="360" height="72" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 168 Q 100 200 100 240"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 93 232 L 100 242 L 107 232"/>
+    <rect x="24" y="244" width="152" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 100 336 Q 100 372 360 396"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 168 Q 260 200 260 240"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 253 232 L 260 242 L 267 232"/>
+    <rect x="184" y="244" width="152" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 260 336 Q 260 372 360 396"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 168 Q 460 200 460 240"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 453 232 L 460 242 L 467 232"/>
+    <rect x="384" y="244" width="152" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 460 336 Q 460 372 360 396"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 168 Q 620 200 620 240"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 613 232 L 620 242 L 627 232"/>
+    <rect x="544" y="244" width="152" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 620 336 Q 620 372 360 396"/>
+  </g>
+  <g filter="url(#sketch-strong)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    
+  </g>
+  <g filter="url(#sketch-strong)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="150" y="400" width="420" height="84" rx="6" stroke="#FF6B47" stroke-width="3.5" fill="rgba(255,107,71,0.13)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 388 L 360 398 L 367 388"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="360" y="126" font-size="22" fill="#ffffff">SITE PICTURE</text>
+    <text x="360" y="152" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">registry + tracks + operator corrections</text>
+    <text x="100" y="278" font-size="21" fill="#ffffff">RAISE</text>
+    <text x="100" y="304" font-size="21" fill="#ffffff">ALERTS</text>
+    <text x="100" y="326" font-size="13" fill="rgba(255,255,255,0.6)" font-style="italic">watchlist plate, crowd</text>
+    <text x="260" y="278" font-size="21" fill="#ffffff">SEARCH</text>
+    <text x="260" y="304" font-size="21" fill="#ffffff">FOOTAGE</text>
+    <text x="260" y="326" font-size="13" fill="rgba(255,255,255,0.6)" font-style="italic">by plate, time, place</text>
+    <text x="460" y="278" font-size="21" fill="#ffffff">DRAFT</text>
+    <text x="460" y="304" font-size="21" fill="#ffffff">REPORTS</text>
+    <text x="460" y="326" font-size="13" fill="rgba(255,255,255,0.6)" font-style="italic">incident summaries</text>
+    <text x="620" y="278" font-size="21" fill="#ffffff">ANSWER</text>
+    <text x="620" y="304" font-size="21" fill="#ffffff">QUESTIONS</text>
+    <text x="620" y="326" font-size="13" fill="rgba(255,255,255,0.6)" font-style="italic">plain language</text>
+    <text x="360" y="436" font-size="22" fill="#ffffff">ROLES + AUDIT LOG</text>
+    <text x="360" y="462" font-size="15" fill="rgba(255,255,255,0.7)" font-style="italic">site-level scope · approvals · every action recorded</text>
+  </g>
+</svg>

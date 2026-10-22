@@ -86,6 +86,6 @@
   <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
     <rect x="120" y="445" width="480" height="58" rx="6" stroke="rgba(234,190,123,0.5)" stroke-width="1.8" fill="rgba(234,190,123,0.05)" stroke-dasharray="6 4"/>
   </g>
-  <text x="360" y="472" font-size="17" fill="#ffffff" text-anchor="middle">all four are composable —</text>
+  <text x="360" y="472" font-size="17" fill="#ffffff" text-anchor="middle">all four are composable:</text>
   <text x="360" y="492" font-size="15" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-style="italic">prove age ≥ 18 AND in-state AND income bracket in a single proof</text>
 </svg>

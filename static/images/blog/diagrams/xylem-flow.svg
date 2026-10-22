@@ -18,8 +18,8 @@
     text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
   </style>
 
-  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Xylem — In-Browser ZK KYC</text>
-  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">Aadhaar in, boolean attestation out — nothing else leaves the browser</text>
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Xylem: In-Browser ZK KYC</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">Aadhaar in, boolean attestation out, nothing else leaves the browser</text>
 
   <!-- Browser boundary box (dashed) -->
   <g filter="url(#sketch)" fill="none">

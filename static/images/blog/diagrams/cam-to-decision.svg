@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 682" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cam-pipe-title cam-pipe-desc">
+  <title id="cam-pipe-title">From Camera Feed to Decision</title>
+  <desc id="cam-pipe-desc">Six stage pipeline: existing cameras, detection, a registry of evidence, cross-camera tracks, agents, and human command.</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="21" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+    <filter id="sketch-strong" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">From Camera Feed to Decision</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">the vision stack, one governed loop</text>
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="150" y="96" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 160 L 360 186"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 178 L 360 188 L 367 178"/>
+    <rect x="150" y="188" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 252 L 360 278"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 270 L 360 280 L 367 270"/>
+    <rect x="150" y="280" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 344 L 360 370"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 362 L 360 372 L 367 362"/>
+    <rect x="150" y="372" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 436 L 360 462"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 454 L 360 464 L 367 454"/>
+    <rect x="150" y="464" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 360 528 L 360 554"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 353 546 L 360 556 L 367 546"/>
+    <rect x="150" y="556" width="420" height="64" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+  </g>
+  <g filter="url(#sketch)" fill="none" stroke-linecap="round"><path stroke="rgba(255,140,112,0.85)" stroke-width="2" stroke-dasharray="7 5" d="M 570 588 Q 650 588 650 324 Q 650 128 574 128"/><path stroke="rgba(255,140,112,0.85)" stroke-width="2" d="M 583 121 L 572 128 L 583 135"/></g>
+  <text x="660" y="324" font-size="15" fill="rgba(255,140,112,0.85)" font-style="italic" text-anchor="middle" transform="rotate(90 660 324)">operator corrections feed back</text>
+  <g text-anchor="middle">
+    <text x="360" y="124" font-size="22" fill="#ffffff">EXISTING CAMERAS</text>
+    <text x="360" y="146" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">feeds already on the network, no new hardware</text>
+    <text x="360" y="216" font-size="22" fill="#ffffff">DETECTION</text>
+    <text x="360" y="238" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">plates · vehicles · people · crowds · scene events</text>
+    <text x="360" y="308" font-size="22" fill="#ffffff">REGISTRY</text>
+    <text x="360" y="330" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">each detection keeps frame, camera, time, confidence</text>
+    <text x="360" y="400" font-size="22" fill="#ffffff">TRACKS</text>
+    <text x="360" y="422" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">sightings joined across cameras into routes</text>
+    <text x="360" y="492" font-size="22" fill="#ffffff">AGENTS</text>
+    <text x="360" y="514" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">alert · search · draft · answer</text>
+    <text x="360" y="584" font-size="22" fill="#ffffff">HUMAN COMMAND</text>
+    <text x="360" y="606" font-size="15" fill="rgba(255,255,255,0.6)" font-style="italic">approve, correct, escalate</text>
+  </g>
+</svg>

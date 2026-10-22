@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 590" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="detect-vs-agentic-title detect-vs-agentic-desc">
+  <title id="detect-vs-agentic-title">Detection Only vs Agentic</title>
+  <desc id="detect-vs-agentic-desc">Left: detection raises alerts into a queue nobody can keep up with. Right: agents triage inside a loop with a human, and corrections improve the system.</desc>
+
+  <defs>
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="41" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+    <filter id="sketch-strong" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="43" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sketch-diagram svg text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+    text { font-family: 'Patrick Hand', 'Comic Sans MS', cursive; }
+  </style>
+
+  <text x="360" y="42" font-size="28" fill="#ffffff" text-anchor="middle">Detection Only vs Agentic</text>
+  <text x="360" y="68" font-size="17" fill="rgba(255,255,255,0.55)" text-anchor="middle">same cameras, two architectures</text>
+  <g filter="url(#sketch)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path stroke="rgba(234,190,123,0.4)" stroke-width="1.6" stroke-dasharray="6 5" d="M 360 100 L 360 520"/>
+    <rect x="80" y="128" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 190 184 L 190 212"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 183 204 L 190 214 L 197 204"/>
+    <rect x="80" y="212" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 190 268 L 190 296"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 183 288 L 190 298 L 197 288"/>
+    <rect x="80" y="296" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 190 352 L 190 380"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 183 372 L 190 382 L 197 372"/>
+    <rect x="80" y="380" width="220" height="92" rx="6" stroke="#FF6B47" stroke-width="3.5" fill="rgba(255,107,71,0.13)"/>
+    <rect x="420" y="128" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 530 184 L 530 212"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 523 204 L 530 214 L 537 204"/>
+    <rect x="420" y="212" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 530 268 L 530 296"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 523 288 L 530 298 L 537 288"/>
+    <rect x="420" y="296" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 530 352 L 530 380"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 523 372 L 530 382 L 537 372"/>
+    <rect x="420" y="380" width="220" height="56" rx="6" stroke="#EABE7B" stroke-width="3.5" fill="rgba(234,190,123,0.15)"/>
+    <rect x="420" y="464" width="220" height="92" rx="6" stroke="#EABE7B" stroke-width="2.5" fill="rgba(234,190,123,0.08)"/>
+    <path stroke="rgba(255,140,112,0.85)" stroke-width="2" stroke-dasharray="7 5" d="M 640 408 Q 680 408 680 300 Q 680 240 644 240"/>
+    <path stroke="rgba(255,140,112,0.85)" stroke-width="2" d="M 653 233 L 642 240 L 653 247"/>
+    <path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 530 436 L 530 464"/><path stroke="rgba(255,255,255,0.65)" stroke-width="2.2" d="M 523 456 L 530 466 L 537 456"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="190" y="112" font-size="17" fill="rgba(234,190,123,0.8)" font-style="italic">DETECTION ONLY</text>
+    <text x="530" y="112" font-size="17" fill="rgba(234,190,123,0.8)" font-style="italic">AGENTIC</text>
+    <text x="190" y="163" font-size="20" fill="#ffffff">CAMERAS</text>
+    <text x="190" y="247" font-size="20" fill="#ffffff">DETECTOR</text>
+    <text x="190" y="331" font-size="20" fill="#ffffff">ALERT QUEUE</text>
+    <text x="190" y="418" font-size="22" fill="#ffffff">NOBODY ACTS</text>
+    <text x="190" y="444" font-size="14" fill="rgba(255,255,255,0.7)" font-style="italic">alert fatigue, missed context</text>
+    <text x="530" y="163" font-size="20" fill="#ffffff">CAMERAS</text>
+    <text x="530" y="247" font-size="20" fill="#ffffff">DETECTOR + TRACKS</text>
+    <text x="530" y="331" font-size="20" fill="#ffffff">AGENTS TRIAGE</text>
+    <text x="530" y="415" font-size="20" fill="#ffffff">HUMAN DECIDES</text>
+    <text x="530" y="502" font-size="22" fill="#ffffff">ACTION + AUDIT</text>
+    <text x="530" y="528" font-size="14" fill="rgba(255,255,255,0.7)" font-style="italic">evidence kept, roles enforced</text>
+    <text x="700" y="300" font-size="14" fill="rgba(255,140,112,0.85)" font-style="italic" text-anchor="middle" transform="rotate(90 700 300)">corrections</text>
+  </g>
+</svg>
