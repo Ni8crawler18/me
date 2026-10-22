@@ -1,6 +1,6 @@
 - name: "Gujarat Police Innovation Challenge"
   award: "3rd Place — Rs 1,00,000"
-  description: "Built agentic vision intelligence for SCRB, Gujarat."
+  description: "Neonet — agentic vision intelligence built for SCRB, Gujarat. Onboards existing cameras and reads plates, vehicles, people and crowds live, joins sightings into tracks across gates, and lets agents raise alerts, search past footage and draft reports under role-based access and a full audit trail."
   image: "images/hackathons/gujarat_police.webp"
   imageAlt: "Gujarat Police Innovation Challenge — 3rd Place"
 
