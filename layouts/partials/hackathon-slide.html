@@ -2,12 +2,17 @@
                                     <div class="testimonial-slider__author">
                                         <cite class="testimonial-slider__cite">
                                             <strong>{{ .name }}</strong>
-                                            <span>{{ .award }}</span>
+                                            <span>{{ with .date }}{{ . }} &middot; {{ end }}{{ .award }}</span>
                                         </cite>
                                     </div>
                                     <p>
                                     {{ .description }}
                                     </p>
                                     {{ with .pressLink }}<a href="{{ . }}" class="hackathon-press-link" target="_blank" rel="noopener noreferrer">{{ $.pressText }} &rarr;</a>{{ end }}
-                                    {{ with .image }}<img src="{{ . | relURL }}" alt="{{ $.imageAlt }}" class="hackathon-img">{{ end }}
+                                    {{ with .image }}
+                                    <figure class="hackathon-figure">
+                                        <img src="{{ . | relURL }}" alt="{{ $.imageAlt }}" class="hackathon-img">
+                                        {{ with $.presenter }}<figcaption>Awarded by {{ . }}</figcaption>{{ end }}
+                                    </figure>
+                                    {{ end }}
                                 </div>
