@@ -39,28 +39,41 @@
 }
 .hackathon-press-link:hover { color: white; }
 .hackathon-figure {
-    position: relative;
     margin: var(--vspace-0_75) 0 0;
     max-width: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1c1c1c;
 }
 .hackathon-img {
     display: block;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    background: #fff;
 }
+.hackathon-figure.contain .hackathon-img { object-fit: contain; }
 .hackathon-figure figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 1.6rem 0.9rem 0.7rem;
-    border-radius: 0 0 8px 8px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    margin: 0;
+    font-style: normal;
+    text-align: left;
+    padding: 0.7rem 1rem 0.8rem;
+    border-left: 3px solid var(--color-1);
     color: #fff;
-    font-size: calc(var(--text-size) * 0.65);
-    line-height: 1.35;
+    font-size: calc(var(--text-size) * 0.68);
+    line-height: 1.4;
+    font-weight: 500;
+}
+.hackathon-figure figcaption small {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-size: 0.72em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
 }
 
 /* --- Responsive overrides --- */

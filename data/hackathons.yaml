@@ -2,6 +2,8 @@
   date: "Oct 2026"
   award: "3rd Place, Rs 1,00,000"
   description: "Neonet: agentic vision intelligence built for SCRB, Gujarat. Onboards existing cameras and reads plates, vehicles, people and crowds live, joins sightings into tracks across gates, and lets agents raise alerts, search past footage and draft reports under role-based access and a full audit trail."
+  pressLink: "https://www.aninews.in/news/national/general-news/gujarat-police-innovation-challenge-2026-winning-teams-awarded-837718-lakh-focus-on-ai-driven-smart-policing20261013223257/"
+  pressText: "ANI Coverage"
   presenter: "Shri Harsh Sanghavi, Deputy Chief Minister of Gujarat"
   image: "images/hackathons/gujarat_police.webp"
   imageAlt: "Gujarat Police Innovation Challenge: 3rd Place"
@@ -24,6 +26,7 @@
   pressText: "Hedera Announcement"
   presenter: "Hedera Foundation (announced online)"
   image: "images/hackathons/hedera_apex.png"
+  fit: "contain"
   imageAlt: "Hedera Hello Future Apex Hackathon: Lamina"
 
 - name: "BRICS Skills Competition 2025"
@@ -32,6 +35,7 @@
   description: "BRICS-FS-28 Cyber Security, the international final of the BRICS+ Future Skills & Tech Challenge. Work covered netflow analysis, web vulnerability analysis, and device forensics. Competed with Naveen Krishnaa S for Bannari Amman Institute of Technology."
   presenter: "BRICS Business Council and SENAI, Brazil"
   image: "images/hackathons/brics_2025.jpg"
+  fit: "contain"
   imageAlt: "BRICS Skills Competition 2025: Second Prize certificate"
 
 - name: "Indian Army Terrier Cyber Quest 2025"

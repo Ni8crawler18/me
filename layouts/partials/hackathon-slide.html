@@ -10,9 +10,9 @@
                                     </p>
                                     {{ with .pressLink }}<a href="{{ . }}" class="hackathon-press-link" target="_blank" rel="noopener noreferrer">{{ $.pressText }} &rarr;</a>{{ end }}
                                     {{ with .image }}
-                                    <figure class="hackathon-figure">
+                                    <figure class="hackathon-figure{{ if eq $.fit "contain" }} contain{{ end }}">
                                         <img src="{{ . | relURL }}" alt="{{ $.imageAlt }}" class="hackathon-img">
-                                        {{ with $.presenter }}<figcaption>Awarded by {{ . }}</figcaption>{{ end }}
+                                        {{ with $.presenter }}<figcaption><small>Awarded by</small>{{ . }}</figcaption>{{ end }}
                                     </figure>
                                     {{ end }}
                                 </div>
